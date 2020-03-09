@@ -132,11 +132,11 @@ namespace iEmBee
                     Directory.CreateDirectory(Path);
                     
                     new frmLoading(()=>
-                    export.Export(SoLuongToiDa, SoLuongToiThieu, 12, buyTotal12, saleTotal12, lswRes, Path, name, address, phone)).ShowDialog();
+                    export.Export(SoLuongToiDa, SoLuongToiThieu, DateTime.Now.AddMonths(0).Month, buyTotal12, saleTotal12, lswRes, Path, name, address, phone)).ShowDialog();
                     new frmLoading(()=>
-                    export.Export(SoLuongToiDa, SoLuongToiThieu, 1, buyTotal1, saleTotal1, lswRes, Path, name, address, phone)).ShowDialog();
+                    export.Export(SoLuongToiDa, SoLuongToiThieu, DateTime.Now.AddMonths(-1).Month, buyTotal1, saleTotal1, lswRes, Path, name, address, phone)).ShowDialog();
                     new frmLoading(()=>
-                    export.Export(SoLuongToiDa, SoLuongToiThieu, 2, buyTotal2, saleTotal2, lswRes, Path, name, address, phone)).ShowDialog();
+                    export.Export(SoLuongToiDa, SoLuongToiThieu, DateTime.Now.AddMonths(1).Month, buyTotal2, saleTotal2, lswRes, Path, name, address, phone)).ShowDialog();
                 }
             }
         }
